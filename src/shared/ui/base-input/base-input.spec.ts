@@ -11,7 +11,7 @@ beforeEach(() => {
     },
   });
 });
-it("should be render", () => {
+it("should be mount", () => {
   expect(baseInput.getCurrentComponent().isMounted).toBeTruthy();
 });
 
@@ -21,4 +21,10 @@ it("test v model", async () => {
 
   await baseInput.vm.$nextTick();
   expect(baseInput.emitted().input).toBeTruthy();
+});
+
+it("should be unmount", () => {
+  baseInput.unmount();
+
+  expect(baseInput.getCurrentComponent().isUnmounted).toBe(true);
 });
