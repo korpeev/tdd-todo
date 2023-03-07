@@ -1,5 +1,5 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
-import { mount, VueWrapper } from "@vue/test-utils";
+import { describe, expect, it, vi } from "vitest";
+import { mount } from "@vue/test-utils";
 import BaseButton from "./base-button.vue";
 import { ButtonVariants } from "./types";
 
