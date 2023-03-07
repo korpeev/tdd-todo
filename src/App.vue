@@ -5,9 +5,9 @@
         <h2>Type your todo</h2>
         <div class="flex gap-x-5">
           <base-input v-model:value="todoInput" />
-          <button class="bg-teal-500 p-1 px-5 text-white rounded font-bold">
-            Add
-          </button>
+          <base-button @click.prevent="click" :variant="ButtonVariants.Error"
+            >test</base-button
+          >
         </div>
       </form>
     </div>
@@ -17,5 +17,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import BaseInput from "shared/ui/base-input/index.vue";
+import { BaseButton, ButtonVariants } from "shared/ui/base-button";
 const todoInput = ref("");
+const click = () => {
+  console.log("clicked");
+};
 </script>
